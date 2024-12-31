@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+  <header>
+    <div id="main">
+<h1>Matured Minds Only</h1>
+    <span style="font-size:17px; cursor:pointer" onclick="openNav()">☰ Menu</span>
+    </div>
+    <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Home</a>
+            <a href="#about.html">About</a>
+            <a href="#">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="sign-in.html"> Sign-in</a>
+            <a href="..\#mm-reg-form"> Sign-up</a>
+    </nav>
+</header>
+
+
+    <form action="https://wwww.firebase-app/action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="images/Logo.jpg" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Matured Minds Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+              
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+      
+      <script src="login.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-SERVICE.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-core.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
+</body>
+</html>

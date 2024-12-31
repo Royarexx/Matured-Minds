@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.profile-container {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+

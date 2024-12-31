@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Matured Minds Gallery</title>
+</head>
+
+<header>
+	<div id="main">
+<h1>Matured Minds Only</h1>
+	<span style="font-size:17px; cursor:pointer" onclick="openNav()">☰ Menu</span>
+	</div>
+	<nav id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="index.html">Home</a>
+			<a href="#">About</a>
+			<a href="#">Events</a>
+			<a href="#">Gallery</a>
+			<a href="sign-in.html"> Sign-in</a>
+			<a href="#mm-reg-form"> Sign-up</a>
+	</nav>
+</header>
+
+<body>
+	<h1>Matured Minds Gallery</h1>
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <!-- Gallery Slideshow -->
+        <div class="gallery-slideshow">
+            <!-- Member Pictures -->
+            <img src="images/DalyaCoast 1.jpg" alt="Member 1">
+            <img src="images/Onyi 1.jpg" alt="Member 3">
+            <img src="images/Ore 1.jpg" alt="Member 3">
+            <img src="images/Ujunwa Galaxy 1.jpg" alt="Member 3">
+            <img src="images/Peter 1.jpg" alt="Member 3">
+            <img src="images/Onyi 2.jpg" alt="Member 3">
+            <img src="images/Oladsmighty 2.jpg" alt="Member 3">
+            <img src="images/Ore 2.jpg" alt="Member 3">
+            <img src="images/Ujunwa Galaxy2.jpg" alt="Member 3">
+            <img src="images/Ore 3.jpg" alt="Member 3">
+			<img src="images/Abefe 1.jpg" alt="Member 3">
+			<img src="images/castro 1.jpg" alt="Member 3">
+			<img src="images/Dwayne 1.jpg" alt="Member 3">
+			<img src="images/Royalty 2.jpg" alt="Member 3">
+			<img src="images/sunny 1.jpg" alt="Member 3">
+			<img src="images/Sunygee.jpg" alt="Member 3">
+			<img src="images/USA.jpg" alt="Member 3">
+			<img src="images/Abefe 2.jpg" alt="Member 3">
+			<img src="images/Royalty 3.jpg" alt="Member 3">
+			<img src="images/castro 2.jpg" alt="Member 3">
+			<img src="images/Royalty 1.jpg" alt="Member 3">
+			<img src="images/Oluwanishola 11.jpg" alt="Member 3">
+			<img src="images/Deborah A 1.jpg" alt="Member 3">
+			<img src="images/Nextorine 1.jpg" alt="Member 3">
+			<img src="images/Oluwanishola 2.jpg" alt="Member 3">
+			<img src="images/Deborah A 2.jpg" alt="Member 3">
+			<img src="images/nextorine 2.jpg" alt="Member 3">
+			<img src="images/hayishar 1.jpg" alt="Member 3">
+			<img src="images/Peter 2.jpg" alt="Member 3">
+			<img src="images/hayishar 3.jpg" alt="Member 3">
+			<img src="images/Deborah A 3.jpg" alt="Member 3">
+			<img src="images/Oladsmighty 4.jpg" alt="Member 3">
+			<img src="images/Elias 1.jpg" alt="Member 3">
+
+
+			
+			
+            <!-- Add more member pictures here -->
+        </div>
+
+		
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button class="prev-button">&lt;</button>
+            <button class="pause-button">Pause</button>
+            <button class="next-button">&gt;</button>
+        </div>
+        <!-- Captions -->
+        <div class="captions">
+            <p id="caption">Member 1</p>
+        </div>
+    </div>
+	<form id="photo-upload-form" >
+		<input type="file" id="photo-upload" accept="image/*">
+		<button id="photo-upload-button">Upload Photo</button>
+		<div id="upload-status"></div>
+	  </form>
+	  
+    <!-- Employee Slider Section -->
+<section>
+	<div class="employee-slider">
+	  <div class="slider-container">
+		<!-- Employee Profiles -->
+		<div class="employee-profile active" id="profile-1">
+		  <img src="images/hayishar 1.jpg" alt="Executive 1">
+		  <h2>Hayishar</h2>
+		  <p class="pro">Founder/Admin</p>
+		</div>
+		<div class="employee-profile" id="profile-2">
+		  <img src="Images/Royalty 1.jpg" alt="Executive 2">
+		  <h2>Royalty</h2>
+		  <p class="pro">Admin/Moderator</p>
+		</div>
+		<div class="employee-profile" id="profile-3">
+		  <img src="images/Ore 3.jpg" alt="Executive 3">
+		  <h2>Oreoluwa</h2>
+		  <p class="pro">Moderator</p>
+		</div>
+		<div class="employee-profile" id="profile-4">
+		  <img src="Images/DalyaCoast 1.jpg" alt="Executive 4">
+		  <h2>DalyaCoast</h2>
+		  <p class="pro">Most Active Member 2024</p>
+		</div>
+		<div class="employee-profile" id="profile-5">
+		  <img src="images/nextorine 3.jpg" alt="Executive 5">
+		  <h2>Nextorine</h2>
+		  <p  class="pro">Most Active Member 2024</p>
+		</div>
+		<div class="employee-profile" id="profile-6">
+		  <img src="images/Onyi 1.jpg" alt="Executive 6">
+		  <h2>Onyi</h2>
+		  <p class="pro">Active Member</p>
+		</div>
+        
+	  </div>
+	  <div class="slider-navigation">
+		<button class="prev-btn" onclick="prevProfile()">Prev</button>
+		<button class="next-btn" onclick="nextProfile()">Next</button>
+	  </div>
+	</div>
+  </section>
+
+  <div>
+	<form id="testimonial-form">
+		<textarea id="testimonial-text" placeholder="Share your testimonial..."></textarea>
+		<button id="testimonial-submit-button">Submit Testimonial</button>
+	  </form>
+	  
+  </div>
+    <script src="gallery.js"></script>
+</body>
+</html>
