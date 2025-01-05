@@ -6,33 +6,34 @@
     <link rel="stylesheet" href="login.css">
     <title>Document</title>
 </head>
-<body>
+<body>   
 
 
-  <header>
-    <div id="main">
+<header>
+	<div id="main">
 <h1>Matured Minds Only</h1>
-    <span style="font-size:17px; cursor:pointer" onclick="openNav()">☰ Menu</span>
-    </div>
-    <nav id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="index.html">Home</a>
-            <a href="#about.html">About</a>
-            <a href="#">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="sign-in.html"> Sign-in</a>
-            <a href="..\#mm-reg-form"> Sign-up</a>
-    </nav>
+	<span style="font-size:17px; cursor:pointer" onclick="openNav()">☰ Menu</span>
+	</div>
+	<nav id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="index.html">Home</a>
+      <a href="#about.html">About</a>
+			<a href="event.html">Events</a>
+      <a href="galery.html">Gallery</a>
+            <a href="#sign-in.html"> Sign-in</a>
+      <a href="..\#mm-reg-form"> Sign-up</a>
+	</nav>
 </header>
 
 
-    <form action="https://wwww.firebase-app/action_page.php" method="post">
+
+<form id="login-form" action="" method="post">
         <div class="imgcontainer">
           <img src="images/Logo.jpg" alt="Avatar" class="avatar">
         </div>
       
         <div class="container">
-          <label for="uname"><b>Username</b></label>
+          <label for="uname"><b>Username/Email</b></label>
           <input type="text" placeholder="Enter Matured Minds Username" name="uname" required>
       
           <label for="psw"><b>Password</b></label>
@@ -55,5 +56,41 @@
 <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-core.js"></script>
 <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
+<script>
+  
+// Navigation Menu
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+  }
+  
+  // Dropdown Menu
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  for (var d = 0; d < dropdowns.length; d++) {
+  var openDropdown = dropdowns[d];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+
+</script>
 </body>
 </html>

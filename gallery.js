@@ -137,7 +137,7 @@ function prevProfile() {
     currentProfileElement.classList.add('active');
   }
   
-
+/*
   const photoUploadForm = document.getElementById('photo-upload-form');
 const photoUploadButton = document.getElementById('photo-upload-button');
 const photoUploadInput = document.getElementById('photo-upload');
@@ -182,6 +182,43 @@ app.post('/upload-photo', upload.single('photo'), (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+*/
+
+// Import Firebase modules
+import { initializeApp } from 'firebase/app';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Initialize Firebase
+const firebaseConfig = {
+  // Your Firebase configuration
+};
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
+const db = getFirestore(app);
+
+// Get the photo upload form
+const photoUploadForm = document.getElementById('photo-upload-form');
+const photoUploadButton = document.getElementById('photo-upload-button');
+const photoUploadInput = document.getElementById('photo-upload');
+const uploadStatus = document.getElementById('upload-status');
+
+photoUploadButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const file = photoUploadInput.files[0];
+  const storageRef = ref(storage, 'photos/' + file.name);
+  try {
+    const uploadTask = await uploadBytes(storageRef, file);
+    const downloadURL = await getDownloadURL(uploadTask.ref);
+    await addDoc(collection(db, 'photos'), { url: downloadURL });
+    uploadStatus.textContent = 'Photo uploaded successfully!';
+  } catch (error) {
+    console.error('Error uploading photo:', error);
+    uploadStatus.textContent = 'Error uploading photo: ' + error.message;
+  }
+});
+
+
 
 
 

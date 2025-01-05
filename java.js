@@ -97,6 +97,7 @@ function showNotification(title, message) {
 }
 
 
+
 //nav bar 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -107,7 +108,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
-  document.body.style.backgroundColor = "gold";
+  document.body.style.backgroundColor = "f9f9f9";
 }
 
 
@@ -129,6 +130,11 @@ if (!e.target.matches('.dropbtn')) {
   }
 }
 }
+
+
+
+
+
 
 
 function updateCountdownTimer() {
@@ -269,7 +275,7 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 autocomplete(document.getElementById("myInput"), countries);
 
 
-
+/*
 // Initialize Firebase
 const firebaseConfig = {
   apiKey: 'AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8',
@@ -331,4 +337,115 @@ signUpForm.addEventListener('submit', (e) => {
       alert('Error creating user');
     });
 });
+*/
 
+
+
+
+// Import the functions needed from the SDKs 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
+
+// my web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8",
+  authDomain: "matured-minds.firebaseapp.com",
+  projectId: "matured-minds",
+  storageBucket: "matured-minds.firebasestorage.app",
+  messagingSenderId: "434293988470",
+  appId: "1:434293988470:web:8c0fd3ee7b76306b361357",
+  measurementId: "G-CXEQYEWH17"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Get the sign-up form
+const signUpForm = document.getElementById('sign-up-form');
+
+// Handle form submission
+signUpForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Get the form data
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('psw-repeat').value;
+  const firstName = document.getElementById('fname').value;
+  const lastName = document.getElementById('lname').value;
+  const telephone = document.getElementById('telephone').value;
+  const dob = document.getElementById('dob').value;
+
+  // Validate the form data
+  if (password !== confirmPassword) {
+    alert('Passwords do not match');
+    return;
+  }
+
+  // Create a new user
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Get the user ID
+      const userId = userCredential.user.uid;
+
+      // Create a new user document
+      setDoc(doc(db, 'users', userId), {
+        username,
+        email,
+        firstName,
+        lastName,
+        telephone,
+        dob: firebase.firestore.Timestamp.fromDate(dob) // Store dob as a Timestamp, 
+      })
+        .then(() => {
+          console.log('User registered successfully');
+          alert('User registered successfully');
+        })
+        .catch((error) => {
+          console.error('Error registering user:', error);
+          alert('Error registering user');
+        });
+    })
+    .catch((error) => {
+      console.error('Error creating user:', error);
+      alert('Error creating user');
+    });
+});
+
+
+// Get the slideshow container
+const slideshowContainer = document.querySelector('.member-spotlight-slideshow');
+
+
+//Fetch member data from JSON file
+fetch('members.json')
+  .then(response => response.json())
+  .then(data => createSlideshow(data));
+
+
+  function createSlideshow(members) {
+    // Create slideshow slides dynamically
+    members.forEach((member) => {
+      const slide = document.createElement('div');
+      slide.classList.add('member-spotlight-slide');
+      slide.innerHTML = `
+        <img src="${member.image}" alt="${member.name} Photo">
+        <h3>${member.name}</h3>
+        <p>${member.message}</p>
+        <p>${member.greeting}</p>
+      `;
+      slideshowContainer.appendChild(slide);
+    });
+  }
+  
+
+  // Initialize the slideshow (you'll need to adapt your existing slideshow logic)
+  // ...
+
+// 

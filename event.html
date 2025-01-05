@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matured Minds Event Page</title>
+    <link rel="stylesheet" href="event.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/dist/fullcalendar.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/dist/fullcalendar.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+   
+  <header>
+    <div id="main">
+    <h1>Matured Minds Only Event Page</h1>
+    <div id="user-info">
+        <span id="user-name"></span>
+        <button id="sign-out">Sign Out</button>
+    </div>
+    <span style="font-size:17px; cursor:pointer" onclick="openNav()">☰ Menu</span>
+    </div>
+    <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="event.html">Events</a>
+            <a href="galery.html">Gallery</a>
+            <a href="sign-in.html"> Sign-in</a>
+            <a href="../#mm-reg-form"> Sign-up</a>
+    </nav>
+</header>
+
+    <main>
+        <section id="events-and-programmes">
+            <h2>Upcoming Events and Programmes</h2>
+            <ul id="events-list">
+                <!-- Events will be listed here -->
+            </ul>
+        </section>
+        <section id="digital-calendar">
+            <h2>Digital Event Calendar</h2>
+            <div id="calendar"></div>
+        </section>
+        <section id="birthday-countdown">
+            <h2>Birthday Countdown</h2>
+            <div id="countdown-timer"></div>
+        </section>
+    </main>
+    <script src="event.js"></script>
+</body>
+</html>

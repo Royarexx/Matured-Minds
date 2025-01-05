@@ -1,0 +1,152 @@
+[debug] [2025-01-04T22:33:27.292Z] ----------------------------------------------------------------------
+[debug] [2025-01-04T22:33:27.298Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2025-01-04T22:33:27.299Z] CLI Version:   13.29.1
+[debug] [2025-01-04T22:33:27.299Z] Platform:      win32
+[debug] [2025-01-04T22:33:27.299Z] Node Version:  v22.12.0
+[debug] [2025-01-04T22:33:27.300Z] Time:          Sat Jan 04 2025 23:33:27 GMT+0100 (West Africa Standard Time)
+[debug] [2025-01-04T22:33:27.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-04T22:33:27.538Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-04T22:33:27.539Z] > authorizing via signed-in user (dyelan2017@gmail.com)
+[debug] [2025-01-04T22:33:27.539Z] [iam] checking project matured-minds for permissions ["firebase.projects.get"]
+[debug] [2025-01-04T22:33:27.541Z] Checked if tokens are valid: false, expires at: 1736030677590
+[debug] [2025-01-04T22:33:27.541Z] Checked if tokens are valid: false, expires at: 1736030677590
+[debug] [2025-01-04T22:33:27.542Z] > refreshing access token with scopes: []
+[debug] [2025-01-04T22:33:27.548Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-01-04T22:33:27.548Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-04T22:33:28.166Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-01-04T22:33:28.166Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-04T22:33:28.826Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds:testIamPermissions [none]
+[debug] [2025-01-04T22:33:28.826Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds:testIamPermissions x-goog-quota-user=projects/matured-minds
+[debug] [2025-01-04T22:33:28.827Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-04T22:33:29.992Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds:testIamPermissions 200
+[debug] [2025-01-04T22:33:29.993Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-04T22:33:29.994Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:29.995Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:29.995Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds [none]
+[debug] [2025-01-04T22:33:30.298Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds 200
+[debug] [2025-01-04T22:33:30.299Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/matured-minds {"projectNumber":"434293988470","projectId":"matured-minds","lifecycleState":"ACTIVE","name":"Matured Minds Only","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2024-12-28T16:51:19.248040Z"}
+[info] 
+[info] === Serving from 'C:\Users\Admin\Desktop\Hayishar'...
+[info] 
+[debug] [2025-01-04T22:33:30.318Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:30.319Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:30.331Z] defaultcredentials: writing to file C:\Users\Admin\AppData\Roaming\firebase\dyelan2017_gmail_com_application_default_credentials.json
+[debug] [2025-01-04T22:33:30.333Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/matured-minds/sites 
+[debug] [2025-01-04T22:33:30.346Z] Setting GAC to C:\Users\Admin\AppData\Roaming\firebase\dyelan2017_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Admin\\AppData\\Roaming\\firebase\\dyelan2017_gmail_com_application_default_credentials.json"}}
+[debug] [2025-01-04T22:33:30.348Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:30.349Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:30.350Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/adminSdkConfig [none]
+[debug] [2025-01-04T22:33:31.853Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/adminSdkConfig 200
+[debug] [2025-01-04T22:33:31.853Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/adminSdkConfig {"projectId":"matured-minds","storageBucket":"matured-minds.firebasestorage.app"}
+[debug] [2025-01-04T22:33:32.743Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/matured-minds/sites 200
+[debug] [2025-01-04T22:33:32.743Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/matured-minds/sites {"sites":[{"name":"projects/matured-minds/sites/matured-minds","defaultUrl":"https://matured-minds.web.app","appId":"1:434293988470:web:073dd32f87556c20361357","type":"DEFAULT_SITE"},{"name":"projects/matured-minds/sites/matured-minds-only","defaultUrl":"https://matured-minds-only.web.app","appId":"1:434293988470:web:8c0fd3ee7b76306b361357","type":"USER_SITE"}]}
+[debug] [2025-01-04T22:33:32.744Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:32.744Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:32.745Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/webApps/1:434293988470:web:073dd32f87556c20361357/config [none]
+[debug] [2025-01-04T22:33:33.468Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/webApps/1:434293988470:web:073dd32f87556c20361357/config 200
+[debug] [2025-01-04T22:33:33.469Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds/webApps/1:434293988470:web:073dd32f87556c20361357/config {"projectId":"matured-minds","appId":"1:434293988470:web:073dd32f87556c20361357","storageBucket":"matured-minds.firebasestorage.app","apiKey":"AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8","authDomain":"matured-minds.firebaseapp.com","messagingSenderId":"434293988470","measurementId":"G-1THWEJE95K"}
+[debug] [2025-01-04T22:33:33.539Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:33.540Z] Checked if tokens are valid: true, expires at: 1736033607167
+[debug] [2025-01-04T22:33:33.541Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds [none]
+[debug] [2025-01-04T22:33:33.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds 200
+[debug] [2025-01-04T22:33:33.863Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matured-minds {"projectId":"matured-minds","projectNumber":"434293988470","displayName":"Matured Minds Only","name":"projects/matured-minds","resources":{"hostingSite":"matured-minds"},"state":"ACTIVE","etag":"1_c75f2dbc-8ee0-4634-9efd-35ecc22e5575"}
+[info] i  functions: Watching "C:\Users\Admin\Desktop\Hayishar\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Admin\\Desktop\\Hayishar\\functions\" for Cloud Functions..."}}
+[info] +  hosting[matured-minds-only]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2025-01-04T22:33:33.927Z] Validating nodejs source
+[debug] [2025-01-04T22:33:36.978Z] > [functions] package.json contents: {
+  "main": "lib/index.js",
+  "scripts": {
+    "genkit:start": "genkit start -- tsx --watch src/genkit-sample.ts",
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "name": "functions",
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "genkit": "^0.9.12",
+    "genkit-cli": "^0.9.12",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^4.9.5"
+  },
+  "private": true
+}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
+
+ functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:39 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:39 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:40 +0000] "GET /style.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:40 +0000] \"GET /style.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:40 +0000] "GET /images/Logo.jpg HTTP/1.1" 200 6473 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:40 +0000] \"GET /images/Logo.jpg HTTP/1.1\" 200 6473 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:40 +0000] "GET /merry-christmas-lights.gif HTTP/1.1" 200 142538 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:40 +0000] \"GET /merry-christmas-lights.gif HTTP/1.1\" 200 142538 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:40 +0000] "GET /happy-new-year-happy-new-year-2025.gif HTTP/1.1" 200 21408 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:40 +0000] \"GET /happy-new-year-happy-new-year-2025.gif HTTP/1.1\" 200 21408 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:40 +0000] "GET /java.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:40 +0000] \"GET /java.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:41 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:41 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /about.html HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /about.html HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /about.css HTTP/1.1" 200 - "http://localhost:5000/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /about.css HTTP/1.1\" 200 - \"http://localhost:5000/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /images/hayishar%201.jpg HTTP/1.1" 200 29557 "http://localhost:5000/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /images/hayishar%201.jpg HTTP/1.1\" 200 29557 \"http://localhost:5000/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /images/Royalty%201.jpg HTTP/1.1" 200 57699 "http://localhost:5000/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /images/Royalty%201.jpg HTTP/1.1\" 200 57699 \"http://localhost:5000/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /about.js HTTP/1.1" 200 - "http://localhost:5000/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /about.js HTTP/1.1\" 200 - \"http://localhost:5000/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [04/Jan/2025:22:34:45 +0000] "GET /images/Ore%203.jpg HTTP/1.1" 200 124229 "http://localhost:5000/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [04/Jan/2025:22:34:45 +0000] \"GET /images/Ore%203.jpg HTTP/1.1\" 200 124229 \"http://localhost:5000/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\""}}
+[debug] [2025-01-04T23:54:58.991Z] File C:\Users\Admin\Desktop\Hayishar\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Admin\\Desktop\\Hayishar\\functions\\package.json changed, reloading triggers"}}
+[debug] [2025-01-04T23:54:59.069Z] File C:\Users\Admin\Desktop\Hayishar\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Admin\\Desktop\\Hayishar\\functions\\package.json changed, reloading triggers"}}
+[debug] [2025-01-04T23:55:00.091Z] Validating nodejs source
+[debug] [2025-01-04T23:55:03.780Z] > [functions] package.json contents: {
+  "main": "lib/index.js",
+  "scripts": {
+    "genkit:start": "genkit start -- tsx --watch src/genkit-sample.ts",
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "name": "functions",
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "genkit": "^0.9.12",
+    "genkit-cli": "^0.9.12",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^4.9.5"
+  },
+  "private": true
+}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions\package.json:
+
+ functions\lib\index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions\\package.json:\n\n functions\\lib\\index.js does not exist, can't deploy Cloud Functions"}}

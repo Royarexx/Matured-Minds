@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+  
   }
   
   html {
@@ -26,8 +27,8 @@ body {
   .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
-    color: white;
+    background-color: #0e1629;
+    color: goldenrod;
   }
   
   .container {
@@ -66,9 +67,13 @@ body {
       display: block;
     }
   }
+ h1, h2 {
+  color: gold;
+ }
 
-
-
+.name {
+  color: #000;
+}
 
   
 header {
