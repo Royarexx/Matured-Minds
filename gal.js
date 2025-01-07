@@ -1,12 +1,12 @@
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: 'AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8',
-    authDomain: 'matured-minds.firebaseapp.com',
-    databaseURL: 'matured-minds.firestore.europe-west1.firebasedatabase.app',
-    projectId: 'matured-minds',
-    storageBucket: 'matured-minds.firebasestorage.app',
-    messagingSenderId: '434293988470',
-    appId: '1:434293988470:web:8c0fd3ee7b76306b361357'
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: ''
 };
 
 firebase.initializeApp(firebaseConfig);
