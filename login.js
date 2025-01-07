@@ -70,13 +70,13 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // My web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8",
-  authDomain: "matured-minds.firebaseapp.com",
-  projectId: "matured-minds",
-  storageBucket: "matured-minds.firebasestorage.app",
-  messagingSenderId: "434293988470",
-  appId: "1:434293988470:web:8c0fd3ee7b76306b361357",
-  measurementId: "G-CXEQYEWH17"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
