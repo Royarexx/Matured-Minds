@@ -1,9 +1,9 @@
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'AIzaSyDWDNTjrHPguqaLVN9k0HtNQlLq7XGRZ-8',
-  authDomain: 'matured-minds.firebaseapp.com',
-  projectId: 'matured-minds',
-  storageBucket: 'matured-minds.firebasestorage.app', // Add your storage bucket
+  apiKey: '',
+  authDomain: '',
+  projectId: '',
+  storageBucket: '', // Add your storage bucket
 };
 
 firebase.initializeApp(firebaseConfig);
